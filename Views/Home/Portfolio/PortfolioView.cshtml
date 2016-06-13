@@ -1,0 +1,113 @@
+﻿@using Portfolio.Models
+
+@Styles.Render("~/Content/portfolio.css")
+
+<section id="portfolio">
+    <div class="row parallax-window" data-parallax="scroll" data-image-src="/Resources/raleigh-dusk.jpg">
+        <div class="col-lg-12 text-center text-padded">
+            <h1>Portfolio</h1>
+        </div>
+    </div>
+    <div>
+        <div class="row no-gutters">
+            <div class="col-lg-6 portfolio-item" style="background: #2c3e50">
+                <a href="#vicModal" class="portfolio-link" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <h2>Visual Inspection Console</h2>
+                </a>
+            </div>
+            <div class="col-lg-6 portfolio-item" style="background: rgba(24,188,156,.9)">
+                <a href="#dtcModal" class="portfolio-link" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <h2>Data Transfer Client</h2>
+                </a>
+            </div>
+            <div class="col-lg-6 portfolio-item" style="background: rgba(24,188,156,.9)">
+                <a href="#wdmModal" class="portfolio-link" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <h2>Wafer Data Manager</h2>
+                </a>
+            </div>
+            <div class="col-lg-6 portfolio-item" style="background: #2c3e50">
+                <a href="#sfwModal" class="portfolio-link" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <h2>Singulation Firewall</h2>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+@Html.Partial("~/Views/Home/Portfolio/PortfolioModal.cshtml",
+    new PortfolioModalModel(
+        "vicModal", "vicGallery", "Visual Inspection Console Screenshots", new List<string>()
+        {
+            "/Resources/portfolio/VIC/VIC-treeview.png",
+            "/Resources/portfolio/VIC/VIC-wafermap.png",
+            "/Resources/portfolio/VIC/VIC-printmap.png",
+            "/Resources/portfolio/VIC/MAP-load.png",
+            "/Resources/portfolio/VIC/MAP-selecttapes.png",
+            "/Resources/portfolio/VIC/MAP-stdtapes.png",
+            "/Resources/portfolio/VIC/MAP-zoom.png",
+            "/Resources/portfolio/VIC/MAP-zoom-2.png",
+            "/Resources/portfolio/VIC/MAP-select.png",
+            "/Resources/portfolio/VIC/MAP-change.png"
+        }
+    )
+)
+@Html.Partial("~/Views/Home/Portfolio/PortfolioModal.cshtml",
+    new PortfolioModalModel(
+        "dtcModal", "dtcGallery", "Data Transfer Client Screenshots", new List<string>()
+        {
+            "/Resources/portfolio/DTC/DTC-overview.png",
+            "/Resources/portfolio/DTC/DTC-login.png",
+            "/Resources/portfolio/DTC/DTC-scheduler-alt.png",
+            "/Resources/portfolio/DTC/DTC-scheduler.png",
+            "/Resources/portfolio/DTC/DTC-scan.png",
+            "/Resources/portfolio/DTC/DTC-scheduledwafers.png",
+            "/Resources/portfolio/DTC/DTC-details-alt-2.png",
+            "/Resources/portfolio/DTC/DTC-details.png",
+            "/Resources/portfolio/DTC/DTC-sendjr-alt.png"
+        }
+    )
+)
+@Html.Partial("~/Views/Home/Portfolio/PortfolioModal.cshtml",
+    new PortfolioModalModel(
+        "wdmModal", "wdmGallery", "Wafer Data Manager Screenshots", new List<string>()
+        {
+            "/Resources/portfolio/WDM/WDM-main.png",
+            "/Resources/portfolio/WDM/WDM-layoutcreator-alt.png",
+            "/Resources/portfolio/WDM/WDM-templatecreator.png",
+            "/Resources/portfolio/WDM/WDM-wafereditor.png",
+            "/Resources/portfolio/WDM/WDM-newrequest.png"
+        }
+    )
+)
+@Html.Partial("~/Views/Home/Portfolio/PortfolioModal.cshtml",
+    new PortfolioModalModel(
+        "sfwModal", "sfwGallery", "Singulation Firewall Screenshots", new List<string>()
+        {
+            "/Resources/portfolio/SFW/SFW-main.png",
+            "/Resources/portfolio/SFW/SFW-pass.png",
+            "/Resources/portfolio/SFW/SFW-fail.png",
+            "/Resources/portfolio/SFW/SFW-fail-alt.png",
+            "/Resources/portfolio/SFW/SFW-fail-alt-2.png"
+        }
+    )
+)

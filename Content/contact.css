@@ -1,0 +1,13 @@
+﻿.container .row:first-child{
+     margin-top: 48px;
+}
+.container .row:last-child {
+    margin-bottom: 48px;
+}
+.contact-data {
+    display: inline-block;
+    text-align: left;
+    margin: 48px;
+    font-size: 26px;
+    width: 522px;
+}
